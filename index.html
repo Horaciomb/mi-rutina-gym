@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Rutina de Horacio — Fuerza y Recomposición Corporal</title>
 <meta name="description" content="Programa de 8 semanas: técnica, hipertrofia y fuerza, con dos calendarios (Lunes-Viernes y Lunes-Sábado)." />
+<meta name="theme-color" content="#f6f7f9" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#14161a" media="(prefers-color-scheme: dark)" />
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -21,18 +23,20 @@
     <div class="control-row">
       <span class="control-label">Calendario</span>
       <div class="pill-group" id="version-pills"></div>
+      <p class="version-subtitle" id="version-subtitle"></p>
     </div>
     <div class="control-row">
       <span class="control-label">Fase del programa</span>
       <div class="pill-group" id="fase-pills"></div>
     </div>
-    <div class="control-row">
-      <span class="control-label" id="version-subtitle"></span>
-      <div class="pill-group day-tabs" id="day-tabs"></div>
-    </div>
   </div>
 
   <div class="phase-banner" id="phase-banner"></div>
+
+  <div class="day-bar-sentinel" aria-hidden="true"></div>
+  <nav class="day-bar" aria-label="Días de entrenamiento">
+    <div class="pill-group day-tabs" id="day-tabs"></div>
+  </nav>
 
   <div class="day-focus" id="day-focus"></div>
   <div class="exercise-grid" id="exercise-grid"></div>

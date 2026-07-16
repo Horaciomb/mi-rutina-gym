@@ -13,6 +13,7 @@
   --chip-accesorio: #6d5bd0;
   --chip-core: #b45309;
   --shadow: 0 1px 2px rgba(16, 24, 40, 0.06), 0 1px 3px rgba(16, 24, 40, 0.08);
+  --img-outline: rgba(0, 0, 0, 0.1);
   --radius: 14px;
   color-scheme: light;
 }
@@ -32,6 +33,7 @@
   --chip-accesorio: #a78bfa;
   --chip-core: #fb923c;
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 4px 12px rgba(0, 0, 0, 0.35);
+  --img-outline: rgba(255, 255, 255, 0.1);
   color-scheme: dark;
 }
 
@@ -51,6 +53,7 @@
     --chip-accesorio: #a78bfa;
     --chip-core: #fb923c;
     --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 4px 12px rgba(0, 0, 0, 0.35);
+    --img-outline: rgba(255, 255, 255, 0.1);
     color-scheme: dark;
   }
 }
@@ -68,9 +71,22 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
 }
 
+h1, h2, h3 { text-wrap: balance; }
+p { text-wrap: pretty; }
+
 a { color: var(--accent-strong); }
+
+:is(.pill, .theme-toggle, summary):focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
 
 .wrap {
   max-width: 980px;
@@ -95,7 +111,8 @@ header.hero p {
 }
 
 .theme-toggle {
-  position: fixed;
+  /* Absoluto (no fijo): se va con el scroll y no tapa la barra sticky de días */
+  position: absolute;
   top: 12px;
   right: 12px;
   z-index: 40;
@@ -103,48 +120,49 @@ header.hero p {
   background: var(--bg-elevated);
   color: var(--text);
   border-radius: 999px;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   font-size: 18px;
   cursor: pointer;
   box-shadow: var(--shadow);
+  touch-action: manipulation;
+  transition-property: transform;
+  transition-duration: 0.15s;
 }
+.theme-toggle:active { transform: scale(0.96); }
 
 /* Controls */
 .controls {
-  position: sticky;
-  top: 0;
-  z-index: 30;
-  background: var(--bg);
   padding: 10px 0 12px;
   border-bottom: 1px solid var(--border);
 }
 
 .control-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  align-items: center;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .control-row:last-child { margin-bottom: 0; }
 
 .control-label {
+  display: block;
   font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--text-muted);
-  width: 100%;
-  margin-bottom: 2px;
+  margin-bottom: 4px;
 }
 
+/* Las píldoras hacen scroll horizontal de borde a borde de la pantalla */
 .pill-group {
+  position: relative;
   display: flex;
   gap: 6px;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
+  overscroll-behavior-x: contain;
+  margin: 0 -16px;
+  padding: 4px 16px;
 }
 .pill-group::-webkit-scrollbar { display: none; }
 
@@ -153,14 +171,22 @@ header.hero p {
   border: 1px solid var(--border);
   background: var(--bg-elevated);
   color: var(--text);
-  padding: 8px 14px;
+  min-height: 44px;
+  padding: 10px 16px;
   border-radius: 999px;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   cursor: pointer;
   white-space: nowrap;
-  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  touch-action: manipulation;
+  -webkit-user-select: none;
+  user-select: none;
+  transition-property: background-color, color, border-color, transform;
+  transition-duration: 0.15s;
 }
-.pill:hover { border-color: var(--accent); }
+@media (hover: hover) {
+  .pill:hover { border-color: var(--accent); }
+}
+.pill:active { transform: scale(0.96); }
 .pill.active {
   background: var(--accent);
   border-color: var(--accent);
@@ -168,7 +194,31 @@ header.hero p {
   font-weight: 600;
 }
 
-.day-tabs { border-bottom: none; }
+.version-subtitle {
+  margin: 8px 0 0;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+/* Barra de días fija — lo único que necesitas tocar durante la sesión */
+.day-bar-sentinel { height: 1px; }
+
+.day-bar {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  margin: 15px -16px 0;
+  padding: 6px 16px;
+  background: var(--bg);
+  background: color-mix(in srgb, var(--bg) 82%, transparent);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  transition-property: box-shadow;
+  transition-duration: 0.2s;
+}
+.day-bar.is-stuck {
+  box-shadow: 0 1px 0 var(--border), var(--shadow);
+}
 
 /* Phase banner */
 .phase-banner {
@@ -204,6 +254,7 @@ header.hero p {
 .day-focus .badge-count {
   color: var(--text-muted);
   font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
 }
 
 /* Exercise cards */
@@ -216,7 +267,8 @@ header.hero p {
 .exercise-card {
   background: var(--bg-elevated);
   border: 1px solid var(--border);
-  border-radius: var(--radius);
+  /* Radio concéntrico: 6px interior de la imagen + 14px de padding = 20px */
+  border-radius: 20px;
   box-shadow: var(--shadow);
   padding: 14px;
   display: grid;
@@ -224,13 +276,35 @@ header.hero p {
   gap: 14px;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  .exercise-card {
+    animation: card-in 0.35s cubic-bezier(0.2, 0, 0, 1) backwards;
+    animation-delay: min(calc(var(--i, 0) * 45ms), 315ms);
+  }
+}
+@keyframes card-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
 .exercise-card .media {
+  position: relative;
   width: 96px;
   height: 96px;
-  border-radius: 10px;
+  border-radius: 6px;
   overflow: hidden;
   background: var(--bg-sunken);
   flex-shrink: 0;
+}
+.exercise-card .media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 0 0 1px var(--img-outline);
+  pointer-events: none;
 }
 .exercise-card .media img {
   width: 100%;
@@ -274,7 +348,11 @@ header.hero p {
   margin: 6px 0 10px;
   font-size: 0.88rem;
 }
-.sets-row strong { display: block; font-size: 1rem; }
+.sets-row strong {
+  display: block;
+  font-size: 1.1rem;
+  font-variant-numeric: tabular-nums;
+}
 .sets-row span.label { color: var(--text-muted); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; }
 
 .note {
@@ -284,11 +362,37 @@ header.hero p {
 }
 
 details.instructions summary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px; /* área táctil cómoda para el pulgar */
+  margin: -6px 0;
   cursor: pointer;
   font-size: 0.85rem;
   color: var(--accent-strong);
   font-weight: 600;
-  outline: none;
+  list-style: none;
+  touch-action: manipulation;
+  -webkit-user-select: none;
+  user-select: none;
+}
+details.instructions summary::-webkit-details-marker { display: none; }
+details.instructions summary::before {
+  content: "";
+  flex-shrink: 0;
+  width: 7px;
+  height: 7px;
+  margin-top: -2px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(-45deg);
+  transition-property: transform;
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0.2, 0, 0, 1);
+}
+details.instructions[open] summary::before {
+  margin-top: -4px;
+  transform: rotate(45deg);
 }
 details.instructions ol {
   margin: 8px 0 0;
@@ -329,6 +433,7 @@ details.instructions li { margin-bottom: 4px; }
 @media (min-width: 640px) {
   .guide-grid { grid-template-columns: 1fr 1fr; }
   .exercise-card { grid-template-columns: 120px 1fr; }
+  .exercise-card .media { width: 120px; height: 120px; }
 }
 
 .guide-card {

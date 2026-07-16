@@ -24,6 +24,8 @@
   }
 
   // --- Tema ---------------------------------------------------------------
+  var THEME_COLORS = { light: '#f6f7f9', dark: '#14161a' };
+
   function applyTheme(theme) {
     var root = document.documentElement;
     if (theme === 'dark' || theme === 'light') {
@@ -31,6 +33,11 @@
     } else {
       root.removeAttribute('data-theme');
     }
+    // Sincroniza el color de la barra del navegador móvil con el tema efectivo.
+    document.querySelectorAll('meta[name="theme-color"]').forEach(function (m) {
+      var scheme = (m.media || '').indexOf('dark') !== -1 ? 'dark' : 'light';
+      m.setAttribute('content', THEME_COLORS[theme || scheme]);
+    });
   }
 
   function initTheme() {
@@ -64,7 +71,7 @@
   }
 
   function pill(label, active, onClick) {
-    var b = el('button', { class: 'pill' + (active ? ' active' : '') }, []);
+    var b = el('button', { class: 'pill' + (active ? ' active' : ''), type: 'button' }, []);
     b.textContent = label;
     b.addEventListener('click', onClick);
     return b;
@@ -76,7 +83,7 @@
     var fase = ex.fases[state.fase];
     var card = el('div', { class: 'exercise-card' }, [
       el('div', { class: 'media' }, [
-        el('img', { src: ex.gif, alt: ex.nombre, loading: 'lazy' }, [])
+        el('img', { src: ex.gif, alt: ex.nombre, loading: 'lazy', decoding: 'async' }, [])
       ]),
       buildInfo(ex, fase)
     ]);
@@ -164,17 +171,39 @@
     });
   }
 
-  function renderDayTabs() {
+  function renderDayTabs(smoothCenter) {
     var container = document.getElementById('day-tabs');
     container.innerHTML = '';
     var version = ROUTINE_DATA.versiones[state.version];
     version.dias.forEach(function (dia, idx) {
       container.appendChild(pill(dia.nombre, state.diaIndex === idx, function () {
+        if (state.diaIndex === idx) return;
         state.diaIndex = idx;
         saveState();
+        renderDayTabs(true);
         renderDay();
+        scrollToDayStart();
       }));
     });
+    centerActiveDayTab(container, smoothCenter);
+  }
+
+  // Centra la pestaña del día activo dentro de la barra scrolleable.
+  function centerActiveDayTab(container, smooth) {
+    var active = container.querySelector('.pill.active');
+    if (!active || !container.scrollTo) return;
+    var target = active.offsetLeft - (container.clientWidth - active.offsetWidth) / 2;
+    container.scrollTo({ left: target, behavior: smooth ? 'smooth' : 'auto' });
+  }
+
+  // Al cambiar de día estando avanzado en la lista, vuelve al inicio del día.
+  function scrollToDayStart() {
+    var focus = document.getElementById('day-focus');
+    var bar = document.querySelector('.day-bar');
+    var top = focus.getBoundingClientRect().top + window.scrollY - (bar ? bar.offsetHeight : 0) - 8;
+    if (window.scrollY > top) {
+      window.scrollTo({ top: Math.max(top, 0), behavior: 'smooth' });
+    }
   }
 
   function renderPhaseBanner() {
@@ -197,8 +226,10 @@
 
     var grid = document.getElementById('exercise-grid');
     grid.innerHTML = '';
-    dia.ejercicios.forEach(function (ex) {
-      grid.appendChild(exerciseCard(ex));
+    dia.ejercicios.forEach(function (ex, idx) {
+      var card = exerciseCard(ex);
+      card.style.setProperty('--i', idx); // retraso de la animación escalonada
+      grid.appendChild(card);
     });
   }
 
@@ -208,6 +239,17 @@
   }
 
   function renderAll() {
+    // Sanea estado guardado que ya no exista en los datos.
+    var version = ROUTINE_DATA.versiones[state.version];
+    if (!version) {
+      state.version = Object.keys(ROUTINE_DATA.versiones)[0];
+      version = ROUTINE_DATA.versiones[state.version];
+    }
+    if (state.diaIndex >= version.dias.length) state.diaIndex = 0;
+    if (!ROUTINE_DATA.fases.some(function (f) { return f.key === state.fase; })) {
+      state.fase = ROUTINE_DATA.fases[0].key;
+    }
+
     renderVersionPills();
     renderFasePills();
     renderSubtitle();
@@ -248,9 +290,20 @@
     seguimientoCard.appendChild(el('p', { class: 'meta-line', text: ROUTINE_DATA.transversal.metaPlazo }, []));
   }
 
+  // Sombra en la barra de días solo cuando está pegada arriba.
+  function initStickyBar() {
+    var sentinel = document.querySelector('.day-bar-sentinel');
+    var bar = document.querySelector('.day-bar');
+    if (!sentinel || !bar || !('IntersectionObserver' in window)) return;
+    new IntersectionObserver(function (entries) {
+      bar.classList.toggle('is-stuck', !entries[0].isIntersecting);
+    }).observe(sentinel);
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     initTheme();
     renderAll();
     renderGuide();
+    initStickyBar();
   });
 })();

@@ -117,7 +117,7 @@ const ROUTINE_DATA = {
               "grupo_muscular": "Piernas",
               "musculo_objetivo": "glúteos",
               "musculos_secundarios": [
-                "quadriceps",
+                "cuádriceps",
                 "isquiotibiales",
                 "pantorrillas"
               ],
@@ -160,7 +160,7 @@ const ROUTINE_DATA = {
               "grupo_muscular": "Piernas",
               "musculo_objetivo": "glúteos",
               "musculos_secundarios": [
-                "quadriceps",
+                "cuádriceps",
                 "isquiotibiales",
                 "pantorrillas"
               ],
@@ -242,7 +242,7 @@ const ROUTINE_DATA = {
               "grupo_muscular": "Pantorrillas",
               "musculo_objetivo": "pantorrillas",
               "musculos_secundarios": [
-                "ankles"
+                "tobillos"
               ],
               "equipo": "Mancuerna",
               "instrucciones": [
@@ -280,8 +280,8 @@ const ROUTINE_DATA = {
               "grupo_muscular": "Core / Abdomen",
               "musculo_objetivo": "abdominales",
               "musculos_secundarios": [
-                "obliques",
-                "shoulders"
+                "oblicuos",
+                "hombros"
               ],
               "equipo": "Peso corporal",
               "instrucciones": [
@@ -326,7 +326,7 @@ const ROUTINE_DATA = {
               "musculo_objetivo": "pectorales",
               "musculos_secundarios": [
                 "tríceps",
-                "shoulders"
+                "hombros"
               ],
               "equipo": "Barra",
               "instrucciones": [
@@ -367,7 +367,7 @@ const ROUTINE_DATA = {
               "grupo_muscular": "Pecho",
               "musculo_objetivo": "pectorales",
               "musculos_secundarios": [
-                "shoulders",
+                "hombros",
                 "tríceps"
               ],
               "equipo": "Mancuerna",
@@ -529,8 +529,8 @@ const ROUTINE_DATA = {
               "grupo_muscular": "Brazos",
               "musculo_objetivo": "tríceps",
               "musculos_secundarios": [
-                "chest",
-                "shoulders"
+                "pecho",
+                "hombros"
               ],
               "equipo": "Peso corporal",
               "instrucciones": [
@@ -576,8 +576,8 @@ const ROUTINE_DATA = {
               "musculo_objetivo": "dorsales",
               "musculos_secundarios": [
                 "bíceps",
-                "rhomboids",
-                "rear deltoids"
+                "romboides",
+                "deltoides posteriores"
               ],
               "equipo": "Polea / cable",
               "instrucciones": [
@@ -698,8 +698,8 @@ const ROUTINE_DATA = {
               "grupo_muscular": "Hombros",
               "musculo_objetivo": "deltoides",
               "musculos_secundarios": [
-                "trapezius",
-                "rhomboids",
+                "trapecios",
+                "romboides",
                 "bíceps"
               ],
               "equipo": "Polea / cable",
@@ -830,7 +830,7 @@ const ROUTINE_DATA = {
               "musculo_objetivo": "glúteos",
               "musculos_secundarios": [
                 "isquiotibiales",
-                "lower back"
+                "espalda baja"
               ],
               "equipo": "Mancuerna",
               "instrucciones": [
@@ -869,7 +869,7 @@ const ROUTINE_DATA = {
               "musculo_objetivo": "glúteos",
               "musculos_secundarios": [
                 "isquiotibiales",
-                "lower back"
+                "espalda baja"
               ],
               "equipo": "Barra",
               "instrucciones": [
@@ -991,8 +991,8 @@ const ROUTINE_DATA = {
               "grupo_muscular": "Pantorrillas",
               "musculo_objetivo": "pantorrillas",
               "musculos_secundarios": [
-                "soleus",
-                "ankle stabilizers"
+                "sóleo",
+                "estabilizadores del tobillo"
               ],
               "equipo": "Máquina de palanca",
               "instrucciones": [
@@ -1161,7 +1161,7 @@ const ROUTINE_DATA = {
               "grupo_muscular": "Brazos",
               "musculo_objetivo": "tríceps",
               "musculos_secundarios": [
-                "shoulders"
+                "hombros"
               ],
               "equipo": "Mancuerna",
               "instrucciones": [
@@ -1200,7 +1200,7 @@ const ROUTINE_DATA = {
               "grupo_muscular": "Core / Abdomen",
               "musculo_objetivo": "abdominales",
               "musculos_secundarios": [
-                "obliques"
+                "oblicuos"
               ],
               "equipo": "Peso corporal",
               "instrucciones": [
@@ -1238,8 +1238,8 @@ const ROUTINE_DATA = {
               "grupo_muscular": "Core / Abdomen",
               "musculo_objetivo": "abdominales",
               "musculos_secundarios": [
-                "obliques",
-                "shoulders"
+                "oblicuos",
+                "hombros"
               ],
               "equipo": "Peso corporal",
               "instrucciones": [
@@ -1288,7 +1288,7 @@ const ROUTINE_DATA = {
               "musculo_objetivo": "pectorales",
               "musculos_secundarios": [
                 "tríceps",
-                "shoulders"
+                "hombros"
               ],
               "equipo": "Barra",
               "instrucciones": [
@@ -1450,8 +1450,8 @@ const ROUTINE_DATA = {
               "grupo_muscular": "Brazos",
               "musculo_objetivo": "tríceps",
               "musculos_secundarios": [
-                "chest",
-                "shoulders"
+                "pecho",
+                "hombros"
               ],
               "equipo": "Peso corporal",
               "instrucciones": [
@@ -1497,8 +1497,8 @@ const ROUTINE_DATA = {
               "musculo_objetivo": "dorsales",
               "musculos_secundarios": [
                 "bíceps",
-                "rhomboids",
-                "rear deltoids"
+                "romboides",
+                "deltoides posteriores"
               ],
               "equipo": "Polea / cable",
               "instrucciones": [
@@ -1579,8 +1579,8 @@ const ROUTINE_DATA = {
               "grupo_muscular": "Hombros",
               "musculo_objetivo": "deltoides",
               "musculos_secundarios": [
-                "trapezius",
-                "rhomboids",
+                "trapecios",
+                "romboides",
                 "bíceps"
               ],
               "equipo": "Polea / cable",
@@ -1751,7 +1751,7 @@ const ROUTINE_DATA = {
               "grupo_muscular": "Piernas",
               "musculo_objetivo": "glúteos",
               "musculos_secundarios": [
-                "quadriceps",
+                "cuádriceps",
                 "isquiotibiales",
                 "pantorrillas"
               ],
@@ -1834,7 +1834,7 @@ const ROUTINE_DATA = {
               "grupo_muscular": "Pantorrillas",
               "musculo_objetivo": "pantorrillas",
               "musculos_secundarios": [
-                "ankles"
+                "tobillos"
               ],
               "equipo": "Mancuerna",
               "instrucciones": [
@@ -1872,8 +1872,8 @@ const ROUTINE_DATA = {
               "grupo_muscular": "Core / Abdomen",
               "musculo_objetivo": "abdominales",
               "musculos_secundarios": [
-                "obliques",
-                "shoulders"
+                "oblicuos",
+                "hombros"
               ],
               "equipo": "Peso corporal",
               "instrucciones": [
@@ -1917,7 +1917,7 @@ const ROUTINE_DATA = {
               "grupo_muscular": "Pecho",
               "musculo_objetivo": "pectorales",
               "musculos_secundarios": [
-                "shoulders",
+                "hombros",
                 "tríceps"
               ],
               "equipo": "Barra",
@@ -1959,7 +1959,7 @@ const ROUTINE_DATA = {
               "musculo_objetivo": "pectorales",
               "musculos_secundarios": [
                 "tríceps",
-                "shoulders"
+                "hombros"
               ],
               "equipo": "Mancuerna",
               "instrucciones": [
@@ -2038,7 +2038,7 @@ const ROUTINE_DATA = {
               "grupo_muscular": "Brazos",
               "musculo_objetivo": "tríceps",
               "musculos_secundarios": [
-                "shoulders"
+                "hombros"
               ],
               "equipo": "Mancuerna",
               "instrucciones": [
@@ -2077,8 +2077,8 @@ const ROUTINE_DATA = {
               "grupo_muscular": "Brazos",
               "musculo_objetivo": "tríceps",
               "musculos_secundarios": [
-                "chest",
-                "shoulders"
+                "pecho",
+                "hombros"
               ],
               "equipo": "Peso corporal",
               "instrucciones": [
@@ -2246,7 +2246,7 @@ const ROUTINE_DATA = {
               "grupo_muscular": "Espalda",
               "musculo_objetivo": "trapecios",
               "musculos_secundarios": [
-                "shoulders"
+                "hombros"
               ],
               "equipo": "Barra",
               "instrucciones": [
@@ -2332,7 +2332,7 @@ const ROUTINE_DATA = {
               "musculo_objetivo": "glúteos",
               "musculos_secundarios": [
                 "isquiotibiales",
-                "lower back"
+                "espalda baja"
               ],
               "equipo": "Barra",
               "instrucciones": [
@@ -2375,7 +2375,7 @@ const ROUTINE_DATA = {
               "musculo_objetivo": "glúteos",
               "musculos_secundarios": [
                 "isquiotibiales",
-                "lower back"
+                "espalda baja"
               ],
               "equipo": "Barra",
               "instrucciones": [
@@ -2497,7 +2497,7 @@ const ROUTINE_DATA = {
               "grupo_muscular": "Core / Abdomen",
               "musculo_objetivo": "abdominales",
               "musculos_secundarios": [
-                "obliques"
+                "oblicuos"
               ],
               "equipo": "Peso corporal",
               "instrucciones": [
@@ -2535,8 +2535,8 @@ const ROUTINE_DATA = {
               "grupo_muscular": "Core / Abdomen",
               "musculo_objetivo": "abdominales",
               "musculos_secundarios": [
-                "obliques",
-                "shoulders"
+                "oblicuos",
+                "hombros"
               ],
               "equipo": "Peso corporal",
               "instrucciones": [

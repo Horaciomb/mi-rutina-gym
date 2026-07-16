@@ -230,10 +230,13 @@ const EQUIPO_ES = {
   'smith machine': 'Máquina Smith', kettlebell: 'Kettlebell', band: 'Banda elástica',
 };
 const MUSCULO_ES = {
-  quads: 'cuádriceps', glutes: 'glúteos', hamstrings: 'isquiotibiales', calves: 'pantorrillas',
-  pectorals: 'pectorales', delts: 'deltoides', triceps: 'tríceps', biceps: 'bíceps',
-  lats: 'dorsales', 'upper back': 'espalda alta', forearms: 'antebrazos', abs: 'abdominales',
-  traps: 'trapecios', spine: 'espalda baja', adductors: 'aductores', abductors: 'abductores',
+  quads: 'cuádriceps', quadriceps: 'cuádriceps', glutes: 'glúteos', hamstrings: 'isquiotibiales',
+  calves: 'pantorrillas', pectorals: 'pectorales', chest: 'pecho', delts: 'deltoides',
+  'rear deltoids': 'deltoides posteriores', shoulders: 'hombros', triceps: 'tríceps', biceps: 'bíceps',
+  lats: 'dorsales', 'upper back': 'espalda alta', 'lower back': 'espalda baja', forearms: 'antebrazos',
+  abs: 'abdominales', obliques: 'oblicuos', traps: 'trapecios', trapezius: 'trapecios',
+  rhomboids: 'romboides', spine: 'espalda baja', adductors: 'aductores', abductors: 'abductores',
+  soleus: 'sóleo', ankles: 'tobillos', 'ankle stabilizers': 'estabilizadores del tobillo',
 };
 const traducirMusculo = (m) => MUSCULO_ES[m] || m;
 

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Rutina de Horacio — Fuerza y Recomposición Corporal</title>
+<meta name="description" content="Programa de 8 semanas: técnica, hipertrofia y fuerza, con dos calendarios (Lunes-Viernes y Lunes-Sábado)." />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<button id="theme-toggle" class="theme-toggle" title="Cambiar tema claro/oscuro" aria-label="Cambiar tema">🌓</button>
+
+<div class="wrap">
+
+  <header class="hero">
+    <h1>Rutina de Horacio</h1>
+    <p>Programa de 8 semanas · Recomposición corporal · Prioridad: espalda, piernas y brazos</p>
+  </header>
+
+  <div class="controls">
+    <div class="control-row">
+      <span class="control-label">Calendario</span>
+      <div class="pill-group" id="version-pills"></div>
+    </div>
+    <div class="control-row">
+      <span class="control-label">Fase del programa</span>
+      <div class="pill-group" id="fase-pills"></div>
+    </div>
+    <div class="control-row">
+      <span class="control-label" id="version-subtitle"></span>
+      <div class="pill-group day-tabs" id="day-tabs"></div>
+    </div>
+  </div>
+
+  <div class="phase-banner" id="phase-banner"></div>
+
+  <div class="day-focus" id="day-focus"></div>
+  <div class="exercise-grid" id="exercise-grid"></div>
+
+  <section class="guide-section">
+    <h2>Guía general</h2>
+    <p class="lead">Principios, caminata, alimentación y seguimiento — aplican a ambos calendarios y a las tres fases.</p>
+
+    <div class="guide-grid">
+      <div class="guide-card">
+        <h3>🛡️ Calentamiento y prevención de lesiones</h3>
+        <ul id="principios-list"></ul>
+      </div>
+
+      <div class="guide-card">
+        <h3>🚶 Caminata diaria</h3>
+        <div id="pasos-content"></div>
+      </div>
+
+      <div class="guide-card">
+        <h3>🍳 Alimentación</h3>
+        <div id="alimentacion-content"></div>
+      </div>
+
+      <div class="guide-card">
+        <h3>📈 Seguimiento</h3>
+        <div id="seguimiento-content"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>
+      Datos de ejercicios e instrucciones: <a href="https://github.com/hasaneyldrm/exercises-dataset" target="_blank" rel="noopener">hasaneyldrm/exercises-dataset</a> (MIT).
+      GIFs e imágenes © Gym visual — <a href="https://gymvisual.com/" target="_blank" rel="noopener">gymvisual.com</a>, uso personal.
+    </p>
+  </footer>
+
+</div>
+
+<script src="data/routine.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

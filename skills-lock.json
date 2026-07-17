@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "skills": {
+    "make-interfaces-feel-better": {
+      "source": "jakubkrehel/make-interfaces-feel-better",
+      "sourceType": "github",
+      "skillPath": "skills/make-interfaces-feel-better/SKILL.md",
+      "computedHash": "f0924279cb953f8396eb037734a82822816c738b3f491a0465c191488c6449a2"
+    },
+    "strength-and-conditioning": {
+      "source": "Tibsfox/gsd-skill-creator",
+      "sourceType": "github",
+      "skillPath": "examples/skills/physical-education/strength-and-conditioning/SKILL.md",
+      "computedHash": "c06c2dc550e85d4ef92551993c8c3401f9a8a7049a7d6afcac3b42782c91a99a"
+    }
+  }
+}

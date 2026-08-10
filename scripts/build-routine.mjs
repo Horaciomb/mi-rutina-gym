@@ -176,6 +176,42 @@ const VERSIONES = {
       ]),
     ],
   },
+  CASA: {
+    nombre: 'En casa',
+    subtitulo: '3 días — Full Body con mancuernas',
+    dias: [
+      dia('Lunes', 'Full Body A — cuádriceps + empuje', [
+        ej('1760', 'principal'),
+        ej('0410', 'principal'),
+        ej('0289', 'principal', 'Sin banco: hazlo en el suelo como floor press (bajada lenta hasta que los codos toquen el piso).'),
+        ej('0405', 'accesorio'),
+        ej('0292', 'principal', 'Apoya mano y rodilla en una silla o cama si no tienes banco.'),
+        ej('0285', 'accesorio'),
+        ej('2188', 'accesorio'),
+        ej('0464', 'core'),
+      ]),
+      dia('Miércoles', 'Full Body B — posterior + espalda', [
+        ej('1459', 'principal'),
+        ej('0336', 'accesorio'),
+        ej('0417', 'accesorio'),
+        ej('0292', 'principal'),
+        ej('0375', 'principal', 'Mejor ejercicio de dorsal sin barra ni polea en casa.'),
+        ej('0314', 'principal', 'Sin banco: suple con floor press o press de pie si no tienes apoyo inclinado.'),
+        ej('0313', 'accesorio'),
+        ej('0687', 'core'),
+      ]),
+      dia('Viernes', 'Full Body C — unilateral + hombro/brazos', [
+        ej('1760', 'principal'),
+        ej('1757', 'principal'),
+        ej('0405', 'principal'),
+        ej('0334', 'accesorio'),
+        ej('0293', 'principal'),
+        ej('0297', 'accesorio'),
+        ej('2188', 'accesorio'),
+        ej('3544', 'core'),
+      ]),
+    ],
+  },
 };
 
 // El dataset solo trae el nombre en inglés (el campo `name`); las instrucciones sí
@@ -217,6 +253,10 @@ const NOMBRES_ES = {
   '0651': 'Dominada con agarre neutro',
   '0095': 'Encogimiento de hombros con barra',
   '0085': 'Peso muerto rumano con barra',
+  '0292': 'Remo a un brazo con mancuerna',
+  '0375': 'Pullover con mancuerna',
+  '1757': 'Peso muerto a una pierna con mancuerna',
+  '0297': 'Curl concentrado con mancuerna',
 };
 
 const BODY_PART_ES = {
@@ -299,6 +339,7 @@ const routineData = {
   versiones: {
     LV: buildVersion(VERSIONES.LV),
     LS: buildVersion(VERSIONES.LS),
+    CASA: buildVersion(VERSIONES.CASA),
   },
 };
 

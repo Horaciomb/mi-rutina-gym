@@ -6,7 +6,7 @@ recomposición corporal. Sin framework ni bundler: HTML + CSS + JavaScript vanil
 
 ## ✨ Características
 
-- **Dos calendarios** intercambiables: Lunes-Viernes (5 días, Empuje/Tirón/Piernas) y Lunes-Sábado (6 días, Push/Pull/Legs ×2).
+- **Tres versiones** intercambiables: Lunes-Viernes (5 días, Empuje/Tirón/Piernas), Lunes-Sábado (6 días, Push/Pull/Legs ×2) y **En casa** (3 días Full Body con mancuernas, para cuando no llegues al gym).
 - **Tres fases** de progresión (Técnica → Hipertrofia base → Fuerza/Hipertrofia) que ajustan series, reps y descanso automáticamente.
 - **GIF animado, músculos e instrucciones** paso a paso por ejercicio (en español).
 - **Tema claro/oscuro** con respeto por la preferencia del sistema; recuerda tu elección.

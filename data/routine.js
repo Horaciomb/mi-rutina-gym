@@ -2567,6 +2567,992 @@ const ROUTINE_DATA = {
           ]
         }
       ]
+    },
+    "CASA": {
+      "nombre": "En casa",
+      "subtitulo": "3 días — Full Body con mancuernas",
+      "dias": [
+        {
+          "nombre": "Lunes",
+          "enfoque": "Full Body A — cuádriceps + empuje",
+          "ejercicios": [
+            {
+              "id": "1760",
+              "nombre": "Sentadilla goblet con mancuerna",
+              "nombre_en": "dumbbell goblet squat",
+              "gif": "assets/exercises/1760-yn8yg1r.gif",
+              "grupo_muscular": "Piernas",
+              "musculo_objetivo": "cuádriceps",
+              "musculos_secundarios": [
+                "glúteos",
+                "isquiotibiales",
+                "pantorrillas"
+              ],
+              "equipo": "Mancuerna",
+              "instrucciones": [
+                "Ponte de pie con los pies separados a la altura de los hombros, sosteniendo una mancuerna verticalmente contra el pecho con ambas manos.",
+                "Manteniendo el pecho erguido y el core activado, baja el cuerpo a una posición de sentadilla empujando las caderas hacia atrás y flexionando las rodillas.",
+                "Continúa bajando hasta que los muslos queden paralelos al suelo, o tan abajo como puedas hacerlo cómodamente.",
+                "Haz una pausa por un momento en la parte inferior, luego empuja con los talones para regresar a la posición inicial.",
+                "Repite el número de repeticiones deseado."
+              ],
+              "atribucion": "© Gym visual — https://gymvisual.com/",
+              "rol": "principal",
+              "nota": null,
+              "fases": {
+                "fase1_tecnica": {
+                  "series": "3",
+                  "reps": "12-15",
+                  "descanso": "60 seg"
+                },
+                "fase1_hipertrofia": {
+                  "series": "3-4",
+                  "reps": "10-12",
+                  "descanso": "75 seg"
+                },
+                "fase2_fuerza": {
+                  "series": "4",
+                  "reps": "8-10",
+                  "descanso": "90-120 seg"
+                }
+              }
+            },
+            {
+              "id": "0410",
+              "nombre": "Zancada dividida a una pierna con mancuerna (estilo búlgaro)",
+              "nombre_en": "dumbbell single leg split squat",
+              "gif": "assets/exercises/0410-qx4fgX7.gif",
+              "grupo_muscular": "Piernas",
+              "musculo_objetivo": "cuádriceps",
+              "musculos_secundarios": [
+                "glúteos",
+                "isquiotibiales",
+                "pantorrillas"
+              ],
+              "equipo": "Mancuerna",
+              "instrucciones": [
+                "Ponte de pie con los pies separados a la altura de los hombros, sujetando una mancuerna en cada mano.",
+                "Da un paso hacia adelante con un pie y coloca los pies de modo que el pie delantero quede plano en el suelo y el pie trasero quede elevado sobre un banco o escalón.",
+                "Baja el cuerpo flexionando la rodilla y la cadera delanteras, manteniendo la rodilla trasera ligeramente flexionada y el talón trasero levantado del suelo.",
+                "Continúa bajando hasta que el muslo delantero quede paralelo al suelo, luego empuja con el talón delantero para volver a la posición inicial.",
+                "Repite el número de repeticiones deseado y luego cambia de pierna y repite."
+              ],
+              "atribucion": "© Gym visual — https://gymvisual.com/",
+              "rol": "principal",
+              "nota": null,
+              "fases": {
+                "fase1_tecnica": {
+                  "series": "3",
+                  "reps": "12-15",
+                  "descanso": "60 seg"
+                },
+                "fase1_hipertrofia": {
+                  "series": "3-4",
+                  "reps": "10-12",
+                  "descanso": "75 seg"
+                },
+                "fase2_fuerza": {
+                  "series": "4",
+                  "reps": "8-10",
+                  "descanso": "90-120 seg"
+                }
+              }
+            },
+            {
+              "id": "0289",
+              "nombre": "Press de banca con mancuernas",
+              "nombre_en": "dumbbell bench press",
+              "gif": "assets/exercises/0289-SpYC0Kp.gif",
+              "grupo_muscular": "Pecho",
+              "musculo_objetivo": "pectorales",
+              "musculos_secundarios": [
+                "tríceps",
+                "hombros"
+              ],
+              "equipo": "Mancuerna",
+              "instrucciones": [
+                "Túmbate sobre un banco con los pies apoyados en el suelo y la espalda presionada contra el banco.",
+                "Sujeta una mancuerna en cada mano, con las palmas hacia adelante y los brazos extendidos por encima del pecho.",
+                "Baja lentamente las mancuernas hacia los lados del pecho, manteniendo los codos en un ángulo de 90 grados.",
+                "Haz una pausa breve, luego empuja las mancuernas de vuelta hacia arriba hasta la posición inicial, extendiendo completamente los brazos.",
+                "Repite el número de repeticiones deseado."
+              ],
+              "atribucion": "© Gym visual — https://gymvisual.com/",
+              "rol": "principal",
+              "nota": "Sin banco: hazlo en el suelo como floor press (bajada lenta hasta que los codos toquen el piso).",
+              "fases": {
+                "fase1_tecnica": {
+                  "series": "3",
+                  "reps": "12-15",
+                  "descanso": "60 seg"
+                },
+                "fase1_hipertrofia": {
+                  "series": "3-4",
+                  "reps": "10-12",
+                  "descanso": "75 seg"
+                },
+                "fase2_fuerza": {
+                  "series": "4",
+                  "reps": "8-10",
+                  "descanso": "90-120 seg"
+                }
+              }
+            },
+            {
+              "id": "0405",
+              "nombre": "Press militar sentado con mancuerna",
+              "nombre_en": "dumbbell seated shoulder press",
+              "gif": "assets/exercises/0405-znQUdHY.gif",
+              "grupo_muscular": "Hombros",
+              "musculo_objetivo": "deltoides",
+              "musculos_secundarios": [
+                "tríceps",
+                "espalda alta"
+              ],
+              "equipo": "Mancuerna",
+              "instrucciones": [
+                "Siéntate en un banco con una mancuerna en cada mano, apoyadas en los muslos.",
+                "Sube las mancuernas hasta la altura de los hombros, con las palmas hacia adelante.",
+                "Presiona las mancuernas hacia arriba hasta que los brazos queden completamente extendidos por encima de la cabeza.",
+                "Haz una pausa por un momento en la parte superior, luego baja lentamente las mancuernas de vuelta a la altura de los hombros.",
+                "Repite el número de repeticiones deseado."
+              ],
+              "atribucion": "© Gym visual — https://gymvisual.com/",
+              "rol": "accesorio",
+              "nota": null,
+              "fases": {
+                "fase1_tecnica": {
+                  "series": "3",
+                  "reps": "12-15",
+                  "descanso": "60 seg"
+                },
+                "fase1_hipertrofia": {
+                  "series": "3",
+                  "reps": "10-12",
+                  "descanso": "75 seg"
+                },
+                "fase2_fuerza": {
+                  "series": "3",
+                  "reps": "12-15",
+                  "descanso": "60-75 seg"
+                }
+              }
+            },
+            {
+              "id": "0292",
+              "nombre": "Remo a un brazo con mancuerna",
+              "nombre_en": "dumbbell one arm bent-over row",
+              "gif": "assets/exercises/0292-C0MA9bC.gif",
+              "grupo_muscular": "Espalda",
+              "musculo_objetivo": "espalda alta",
+              "musculos_secundarios": [
+                "bíceps",
+                "antebrazos"
+              ],
+              "equipo": "Mancuerna",
+              "instrucciones": [
+                "Ponte de pie con los pies separados a la altura de los hombros, sosteniendo una mancuerna en una mano con la palma hacia el cuerpo.",
+                "Flexiona ligeramente las rodillas e inclínate hacia adelante desde las caderas, manteniendo la espalda recta y el core activado.",
+                "Deja que la mancuerna cuelgue recta hacia el suelo, con el brazo completamente extendido.",
+                "Tira de la mancuerna hacia el pecho, manteniendo el codo cerca del cuerpo y juntando los omóplatos.",
+                "Haz una pausa breve en la parte más alta, luego baja lentamente la mancuerna de vuelta a la posición inicial.",
+                "Repite el número de repeticiones deseado, luego cambia de lado."
+              ],
+              "atribucion": "© Gym visual — https://gymvisual.com/",
+              "rol": "principal",
+              "nota": "Apoya mano y rodilla en una silla o cama si no tienes banco.",
+              "fases": {
+                "fase1_tecnica": {
+                  "series": "3",
+                  "reps": "12-15",
+                  "descanso": "60 seg"
+                },
+                "fase1_hipertrofia": {
+                  "series": "3-4",
+                  "reps": "10-12",
+                  "descanso": "75 seg"
+                },
+                "fase2_fuerza": {
+                  "series": "4",
+                  "reps": "8-10",
+                  "descanso": "90-120 seg"
+                }
+              }
+            },
+            {
+              "id": "0285",
+              "nombre": "Curl de bíceps alterno con mancuerna",
+              "nombre_en": "dumbbell alternate biceps curl",
+              "gif": "assets/exercises/0285-BU15nH4.gif",
+              "grupo_muscular": "Brazos",
+              "musculo_objetivo": "bíceps",
+              "musculos_secundarios": [
+                "antebrazos"
+              ],
+              "equipo": "Mancuerna",
+              "instrucciones": [
+                "Ponte de pie con una mancuerna en cada mano, con las palmas hacia adelante y los brazos completamente extendidos.",
+                "Manteniendo los brazos superiores fijos, exhala y levanta el peso mientras contraes los bíceps.",
+                "Continúa levantando las mancuernas hasta que los bíceps estén completamente contraídos y las mancuernas estén a la altura de los hombros.",
+                "Mantén la posición contraída durante una breve pausa mientras aprietas los bíceps.",
+                "Inhala y comienza a bajar lentamente las mancuernas de vuelta a la posición inicial.",
+                "Repite el número de repeticiones deseado, alternando los brazos."
+              ],
+              "atribucion": "© Gym visual — https://gymvisual.com/",
+              "rol": "accesorio",
+              "nota": null,
+              "fases": {
+                "fase1_tecnica": {
+                  "series": "3",
+                  "reps": "12-15",
+                  "descanso": "60 seg"
+                },
+                "fase1_hipertrofia": {
+                  "series": "3",
+                  "reps": "10-12",
+                  "descanso": "75 seg"
+                },
+                "fase2_fuerza": {
+                  "series": "3",
+                  "reps": "12-15",
+                  "descanso": "60-75 seg"
+                }
+              }
+            },
+            {
+              "id": "2188",
+              "nombre": "Extensión de tríceps sentado con mancuerna",
+              "nombre_en": "dumbbell seated triceps extension",
+              "gif": "assets/exercises/2188-kont8Ut.gif",
+              "grupo_muscular": "Brazos",
+              "musculo_objetivo": "tríceps",
+              "musculos_secundarios": [
+                "hombros"
+              ],
+              "equipo": "Mancuerna",
+              "instrucciones": [
+                "Siéntate en un banco con la espalda recta y los pies planos sobre el suelo.",
+                "Sujeta una mancuerna con ambas manos y extiende los brazos rectos por encima de la cabeza.",
+                "Flexiona los codos y baja la mancuerna detrás de la cabeza, manteniendo la parte superior de los brazos cerca de las orejas.",
+                "Haz una pausa por un momento, luego endereza los brazos y vuelve a la posición inicial.",
+                "Repite el número de repeticiones deseado."
+              ],
+              "atribucion": "© Gym visual — https://gymvisual.com/",
+              "rol": "accesorio",
+              "nota": null,
+              "fases": {
+                "fase1_tecnica": {
+                  "series": "3",
+                  "reps": "12-15",
+                  "descanso": "60 seg"
+                },
+                "fase1_hipertrofia": {
+                  "series": "3",
+                  "reps": "10-12",
+                  "descanso": "75 seg"
+                },
+                "fase2_fuerza": {
+                  "series": "3",
+                  "reps": "12-15",
+                  "descanso": "60-75 seg"
+                }
+              }
+            },
+            {
+              "id": "0464",
+              "nombre": "Plancha frontal con giro",
+              "nombre_en": "front plank with twist",
+              "gif": "assets/exercises/0464-CosupLu.gif",
+              "grupo_muscular": "Core / Abdomen",
+              "musculo_objetivo": "abdominales",
+              "musculos_secundarios": [
+                "oblicuos",
+                "hombros"
+              ],
+              "equipo": "Peso corporal",
+              "instrucciones": [
+                "Comienza en posición de plancha alta con las manos directamente debajo de los hombros y el cuerpo en línea recta de la cabeza a los pies.",
+                "Activa el core y los glúteos para mantener una posición estable.",
+                "Gira el torso hacia la derecha, levantando el brazo derecho y extendiéndolo hacia el techo.",
+                "Mantén las caderas y las piernas estables mientras giras.",
+                "Mantén la posición por un momento, luego regresa a la posición inicial.",
+                "Repite el giro hacia el lado izquierdo.",
+                "Continúa alternando lados durante el número de repeticiones deseado."
+              ],
+              "atribucion": "© Gym visual — https://gymvisual.com/",
+              "rol": "core",
+              "nota": null,
+              "fases": {
+                "fase1_tecnica": {
+                  "series": "3",
+                  "reps": "30-40 seg"
+                },
+                "fase1_hipertrofia": {
+                  "series": "3",
+                  "reps": "35-45 seg"
+                },
+                "fase2_fuerza": {
+                  "series": "3",
+                  "reps": "40-60 seg"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "nombre": "Miércoles",
+          "enfoque": "Full Body B — posterior + espalda",
+          "ejercicios": [
+            {
+              "id": "1459",
+              "nombre": "Peso muerto rumano con mancuernas",
+              "nombre_en": "dumbbell romanian deadlift",
+              "gif": "assets/exercises/1459-rR0LJzx.gif",
+              "grupo_muscular": "Piernas",
+              "musculo_objetivo": "glúteos",
+              "musculos_secundarios": [
+                "isquiotibiales",
+                "espalda baja"
+              ],
+              "equipo": "Mancuerna",
+              "instrucciones": [
+                "Ponte de pie con los pies separados a la altura de los hombros, sujetando una mancuerna en cada mano con un agarre prono.",
+                "Manteniendo la espalda recta y el core activado, inclínate desde las caderas y baja las mancuernas hacia el suelo, permitiendo que las rodillas se flexionen ligeramente.",
+                "Baja las mancuernas hasta sentir un estiramiento en los isquiotibiales, luego empuja con los talones y activa los glúteos para volver a la posición inicial.",
+                "Repite el número de repeticiones deseado."
+              ],
+              "atribucion": "© Gym visual — https://gymvisual.com/",
+              "rol": "principal",
+              "nota": null,
+              "fases": {
+                "fase1_tecnica": {
+                  "series": "3",
+                  "reps": "12-15",
+                  "descanso": "60 seg"
+                },
+                "fase1_hipertrofia": {
+                  "series": "3-4",
+                  "reps": "10-12",
+                  "descanso": "75 seg"
+                },
+                "fase2_fuerza": {
+                  "series": "4",
+                  "reps": "8-10",
+                  "descanso": "90-120 seg"
+                }
+              }
+            },
+            {
+              "id": "0336",
+              "nombre": "Zancada con mancuernas",
+              "nombre_en": "dumbbell lunge",
+              "gif": "assets/exercises/0336-RRWFUcw.gif",
+              "grupo_muscular": "Piernas",
+              "musculo_objetivo": "glúteos",
+              "musculos_secundarios": [
+                "cuádriceps",
+                "isquiotibiales",
+                "pantorrillas"
+              ],
+              "equipo": "Mancuerna",
+              "instrucciones": [
+                "Ponte de pie con los pies separados a la altura de los hombros, sujetando una mancuerna en cada mano.",
+                "Da un paso adelante con el pie derecho, bajando el cuerpo hasta una posición de zancada.",
+                "Mantén la espalda recta y el pecho erguido mientras bajas el cuerpo.",
+                "Empuja con el talón derecho para regresar a la posición inicial.",
+                "Repite con la pierna izquierda.",
+                "Alterna las piernas el número de repeticiones deseado."
+              ],
+              "atribucion": "© Gym visual — https://gymvisual.com/",
+              "rol": "accesorio",
+              "nota": null,
+              "fases": {
+                "fase1_tecnica": {
+                  "series": "3",
+                  "reps": "12-15",
+                  "descanso": "60 seg"
+                },
+                "fase1_hipertrofia": {
+                  "series": "3",
+                  "reps": "10-12",
+                  "descanso": "75 seg"
+                },
+                "fase2_fuerza": {
+                  "series": "3",
+                  "reps": "12-15",
+                  "descanso": "60-75 seg"
+                }
+              }
+            },
+            {
+              "id": "0417",
+              "nombre": "Elevación de talones de pie con mancuerna",
+              "nombre_en": "dumbbell standing calf raise",
+              "gif": "assets/exercises/0417-dPmaUaU.gif",
+              "grupo_muscular": "Pantorrillas",
+              "musculo_objetivo": "pantorrillas",
+              "musculos_secundarios": [
+                "tobillos"
+              ],
+              "equipo": "Mancuerna",
+              "instrucciones": [
+                "Ponte de pie con los pies separados a la altura de los hombros, sujetando una mancuerna en cada mano.",
+                "Levanta los talones del suelo lo más alto posible, usando las pantorrillas.",
+                "Haz una pausa breve en la parte alta y luego baja lentamente los talones de vuelta a la posición inicial.",
+                "Repite el número de repeticiones deseado."
+              ],
+              "atribucion": "© Gym visual — https://gymvisual.com/",
+              "rol": "accesorio",
+              "nota": null,
+              "fases": {
+                "fase1_tecnica": {
+                  "series": "3",
+                  "reps": "12-15",
+                  "descanso": "60 seg"
+                },
+                "fase1_hipertrofia": {
+                  "series": "3",
+                  "reps": "10-12",
+                  "descanso": "75 seg"
+                },
+                "fase2_fuerza": {
+                  "series": "3",
+                  "reps": "12-15",
+                  "descanso": "60-75 seg"
+                }
+              }
+            },
+            {
+              "id": "0292",
+              "nombre": "Remo a un brazo con mancuerna",
+              "nombre_en": "dumbbell one arm bent-over row",
+              "gif": "assets/exercises/0292-C0MA9bC.gif",
+              "grupo_muscular": "Espalda",
+              "musculo_objetivo": "espalda alta",
+              "musculos_secundarios": [
+                "bíceps",
+                "antebrazos"
+              ],
+              "equipo": "Mancuerna",
+              "instrucciones": [
+                "Ponte de pie con los pies separados a la altura de los hombros, sosteniendo una mancuerna en una mano con la palma hacia el cuerpo.",
+                "Flexiona ligeramente las rodillas e inclínate hacia adelante desde las caderas, manteniendo la espalda recta y el core activado.",
+                "Deja que la mancuerna cuelgue recta hacia el suelo, con el brazo completamente extendido.",
+                "Tira de la mancuerna hacia el pecho, manteniendo el codo cerca del cuerpo y juntando los omóplatos.",
+                "Haz una pausa breve en la parte más alta, luego baja lentamente la mancuerna de vuelta a la posición inicial.",
+                "Repite el número de repeticiones deseado, luego cambia de lado."
+              ],
+              "atribucion": "© Gym visual — https://gymvisual.com/",
+              "rol": "principal",
+              "nota": null,
+              "fases": {
+                "fase1_tecnica": {
+                  "series": "3",
+                  "reps": "12-15",
+                  "descanso": "60 seg"
+                },
+                "fase1_hipertrofia": {
+                  "series": "3-4",
+                  "reps": "10-12",
+                  "descanso": "75 seg"
+                },
+                "fase2_fuerza": {
+                  "series": "4",
+                  "reps": "8-10",
+                  "descanso": "90-120 seg"
+                }
+              }
+            },
+            {
+              "id": "0375",
+              "nombre": "Pullover con mancuerna",
+              "nombre_en": "dumbbell pullover",
+              "gif": "assets/exercises/0375-9XjtHvS.gif",
+              "grupo_muscular": "Pecho",
+              "musculo_objetivo": "pectorales",
+              "musculos_secundarios": [
+                "latissimus dorsi",
+                "tríceps"
+              ],
+              "equipo": "Mancuerna",
+              "instrucciones": [
+                "Túmbate boca arriba en un banco con la cabeza en un extremo y los pies en el suelo.",
+                "Sujeta una mancuerna con ambas manos y extiende los brazos rectos por encima del pecho.",
+                "Manteniendo una ligera flexión en los codos, baja lentamente la mancuerna detrás de la cabeza hasta sentir un estiramiento en el pecho y los hombros.",
+                "Haz una pausa por un momento, luego levanta la mancuerna de vuelta a la posición inicial.",
+                "Repite el número de repeticiones deseado."
+              ],
+              "atribucion": "© Gym visual — https://gymvisual.com/",
+              "rol": "principal",
+              "nota": "Mejor ejercicio de dorsal sin barra ni polea en casa.",
+              "fases": {
+                "fase1_tecnica": {
+                  "series": "3",
+                  "reps": "12-15",
+                  "descanso": "60 seg"
+                },
+                "fase1_hipertrofia": {
+                  "series": "3-4",
+                  "reps": "10-12",
+                  "descanso": "75 seg"
+                },
+                "fase2_fuerza": {
+                  "series": "4",
+                  "reps": "8-10",
+                  "descanso": "90-120 seg"
+                }
+              }
+            },
+            {
+              "id": "0314",
+              "nombre": "Press inclinado con mancuerna",
+              "nombre_en": "dumbbell incline bench press",
+              "gif": "assets/exercises/0314-ns0SIbU.gif",
+              "grupo_muscular": "Pecho",
+              "musculo_objetivo": "pectorales",
+              "musculos_secundarios": [
+                "hombros",
+                "tríceps"
+              ],
+              "equipo": "Mancuerna",
+              "instrucciones": [
+                "Coloca un banco inclinado a un ángulo de 45 grados.",
+                "Siéntate en el banco con los pies apoyados en el suelo y la espalda firmemente apoyada contra el banco.",
+                "Sostén una mancuerna en cada mano, con las palmas hacia adelante, y levántalas hasta la altura de los hombros.",
+                "Baja lentamente las mancuernas hacia los lados del pecho, manteniendo los codos en un ángulo de 90 grados.",
+                "Empuja las mancuernas de nuevo hacia arriba hasta la posición inicial, extendiendo completamente los brazos.",
+                "Repite el número de repeticiones deseado."
+              ],
+              "atribucion": "© Gym visual — https://gymvisual.com/",
+              "rol": "principal",
+              "nota": "Sin banco: suple con floor press o press de pie si no tienes apoyo inclinado.",
+              "fases": {
+                "fase1_tecnica": {
+                  "series": "3",
+                  "reps": "12-15",
+                  "descanso": "60 seg"
+                },
+                "fase1_hipertrofia": {
+                  "series": "3-4",
+                  "reps": "10-12",
+                  "descanso": "75 seg"
+                },
+                "fase2_fuerza": {
+                  "series": "4",
+                  "reps": "8-10",
+                  "descanso": "90-120 seg"
+                }
+              }
+            },
+            {
+              "id": "0313",
+              "nombre": "Curl martillo con mancuerna",
+              "nombre_en": "dumbbell hammer curl",
+              "gif": "assets/exercises/0313-slDvUAU.gif",
+              "grupo_muscular": "Brazos",
+              "musculo_objetivo": "bíceps",
+              "musculos_secundarios": [
+                "antebrazos"
+              ],
+              "equipo": "Mancuerna",
+              "instrucciones": [
+                "Ponte de pie con una mancuerna en cada mano, con las palmas mirando hacia el torso.",
+                "Mantén los codos cerca del torso y gira las palmas de las manos hasta que queden mirando hacia adelante.",
+                "Esta será tu posición inicial.",
+                "Ahora, manteniendo los brazos superiores quietos, exhala y flexiona los brazos contrayendo los bíceps.",
+                "Continúa levantando las pesas hasta que los bíceps estén completamente contraídos y las mancuernas estén a la altura de los hombros.",
+                "Mantén la posición contraída durante una breve pausa mientras aprietas los bíceps.",
+                "Luego, inhala y comienza a bajar lentamente las mancuernas de vuelta a la posición inicial.",
+                "Repite el número de repeticiones recomendado."
+              ],
+              "atribucion": "© Gym visual — https://gymvisual.com/",
+              "rol": "accesorio",
+              "nota": null,
+              "fases": {
+                "fase1_tecnica": {
+                  "series": "3",
+                  "reps": "12-15",
+                  "descanso": "60 seg"
+                },
+                "fase1_hipertrofia": {
+                  "series": "3",
+                  "reps": "10-12",
+                  "descanso": "75 seg"
+                },
+                "fase2_fuerza": {
+                  "series": "3",
+                  "reps": "12-15",
+                  "descanso": "60-75 seg"
+                }
+              }
+            },
+            {
+              "id": "0687",
+              "nombre": "Giro ruso",
+              "nombre_en": "russian twist",
+              "gif": "assets/exercises/0687-XVDdcoj.gif",
+              "grupo_muscular": "Core / Abdomen",
+              "musculo_objetivo": "abdominales",
+              "musculos_secundarios": [
+                "oblicuos"
+              ],
+              "equipo": "Peso corporal",
+              "instrucciones": [
+                "Siéntate en el suelo con las rodillas flexionadas y los pies apoyados en el suelo.",
+                "Inclínate ligeramente hacia atrás manteniendo la espalda recta y el core activado.",
+                "Junta las manos frente al pecho o sujeta una pesa si lo deseas.",
+                "Levanta los pies del suelo, equilibrándote sobre los isquiones.",
+                "Gira el torso hacia la derecha, llevando las manos o la pesa hacia el lado derecho del cuerpo.",
+                "Haz una pausa por un momento, luego gira el torso hacia la izquierda, llevando las manos o la pesa hacia el lado izquierdo del cuerpo.",
+                "Continúa alternando lados durante el número de repeticiones deseado."
+              ],
+              "atribucion": "© Gym visual — https://gymvisual.com/",
+              "rol": "core",
+              "nota": null,
+              "fases": {
+                "fase1_tecnica": {
+                  "series": "3",
+                  "reps": "30-40 seg"
+                },
+                "fase1_hipertrofia": {
+                  "series": "3",
+                  "reps": "35-45 seg"
+                },
+                "fase2_fuerza": {
+                  "series": "3",
+                  "reps": "40-60 seg"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "nombre": "Viernes",
+          "enfoque": "Full Body C — unilateral + hombro/brazos",
+          "ejercicios": [
+            {
+              "id": "1760",
+              "nombre": "Sentadilla goblet con mancuerna",
+              "nombre_en": "dumbbell goblet squat",
+              "gif": "assets/exercises/1760-yn8yg1r.gif",
+              "grupo_muscular": "Piernas",
+              "musculo_objetivo": "cuádriceps",
+              "musculos_secundarios": [
+                "glúteos",
+                "isquiotibiales",
+                "pantorrillas"
+              ],
+              "equipo": "Mancuerna",
+              "instrucciones": [
+                "Ponte de pie con los pies separados a la altura de los hombros, sosteniendo una mancuerna verticalmente contra el pecho con ambas manos.",
+                "Manteniendo el pecho erguido y el core activado, baja el cuerpo a una posición de sentadilla empujando las caderas hacia atrás y flexionando las rodillas.",
+                "Continúa bajando hasta que los muslos queden paralelos al suelo, o tan abajo como puedas hacerlo cómodamente.",
+                "Haz una pausa por un momento en la parte inferior, luego empuja con los talones para regresar a la posición inicial.",
+                "Repite el número de repeticiones deseado."
+              ],
+              "atribucion": "© Gym visual — https://gymvisual.com/",
+              "rol": "principal",
+              "nota": null,
+              "fases": {
+                "fase1_tecnica": {
+                  "series": "3",
+                  "reps": "12-15",
+                  "descanso": "60 seg"
+                },
+                "fase1_hipertrofia": {
+                  "series": "3-4",
+                  "reps": "10-12",
+                  "descanso": "75 seg"
+                },
+                "fase2_fuerza": {
+                  "series": "4",
+                  "reps": "8-10",
+                  "descanso": "90-120 seg"
+                }
+              }
+            },
+            {
+              "id": "1757",
+              "nombre": "Peso muerto a una pierna con mancuerna",
+              "nombre_en": "dumbbell single leg deadlift",
+              "gif": "assets/exercises/1757-gKozT8X.gif",
+              "grupo_muscular": "Piernas",
+              "musculo_objetivo": "glúteos",
+              "musculos_secundarios": [
+                "isquiotibiales",
+                "espalda baja"
+              ],
+              "equipo": "Mancuerna",
+              "instrucciones": [
+                "Ponte de pie con los pies separados a la altura de las caderas, sujetando una mancuerna con la mano derecha.",
+                "Traslada tu peso a la pierna izquierda y levanta el pie derecho ligeramente del suelo.",
+                "Manteniendo la espalda recta, inclínate hacia adelante desde las caderas y baja la mancuerna hacia el suelo.",
+                "Al mismo tiempo, extiende la pierna derecha recta hacia atrás, manteniendo una ligera flexión en la rodilla izquierda.",
+                "Baja la mancuerna hasta que tu torso y tu pierna derecha queden paralelos al suelo.",
+                "Haz una pausa por un momento, luego activa los glúteos y los isquiotibiales para volver a la posición inicial.",
+                "Repite el número de repeticiones deseado, luego cambia de lado."
+              ],
+              "atribucion": "© Gym visual — https://gymvisual.com/",
+              "rol": "principal",
+              "nota": null,
+              "fases": {
+                "fase1_tecnica": {
+                  "series": "3",
+                  "reps": "12-15",
+                  "descanso": "60 seg"
+                },
+                "fase1_hipertrofia": {
+                  "series": "3-4",
+                  "reps": "10-12",
+                  "descanso": "75 seg"
+                },
+                "fase2_fuerza": {
+                  "series": "4",
+                  "reps": "8-10",
+                  "descanso": "90-120 seg"
+                }
+              }
+            },
+            {
+              "id": "0405",
+              "nombre": "Press militar sentado con mancuerna",
+              "nombre_en": "dumbbell seated shoulder press",
+              "gif": "assets/exercises/0405-znQUdHY.gif",
+              "grupo_muscular": "Hombros",
+              "musculo_objetivo": "deltoides",
+              "musculos_secundarios": [
+                "tríceps",
+                "espalda alta"
+              ],
+              "equipo": "Mancuerna",
+              "instrucciones": [
+                "Siéntate en un banco con una mancuerna en cada mano, apoyadas en los muslos.",
+                "Sube las mancuernas hasta la altura de los hombros, con las palmas hacia adelante.",
+                "Presiona las mancuernas hacia arriba hasta que los brazos queden completamente extendidos por encima de la cabeza.",
+                "Haz una pausa por un momento en la parte superior, luego baja lentamente las mancuernas de vuelta a la altura de los hombros.",
+                "Repite el número de repeticiones deseado."
+              ],
+              "atribucion": "© Gym visual — https://gymvisual.com/",
+              "rol": "principal",
+              "nota": null,
+              "fases": {
+                "fase1_tecnica": {
+                  "series": "3",
+                  "reps": "12-15",
+                  "descanso": "60 seg"
+                },
+                "fase1_hipertrofia": {
+                  "series": "3-4",
+                  "reps": "10-12",
+                  "descanso": "75 seg"
+                },
+                "fase2_fuerza": {
+                  "series": "4",
+                  "reps": "8-10",
+                  "descanso": "90-120 seg"
+                }
+              }
+            },
+            {
+              "id": "0334",
+              "nombre": "Elevación lateral con mancuerna",
+              "nombre_en": "dumbbell lateral raise",
+              "gif": "assets/exercises/0334-DsgkuIt.gif",
+              "grupo_muscular": "Hombros",
+              "musculo_objetivo": "deltoides",
+              "musculos_secundarios": [
+                "trapecios"
+              ],
+              "equipo": "Mancuerna",
+              "instrucciones": [
+                "Ponte de pie con los pies separados a la altura de los hombros y sostén una mancuerna en cada mano, con las palmas hacia el cuerpo.",
+                "Mantén la espalda recta y activa el core.",
+                "Levanta los brazos hacia los lados hasta que queden paralelos al suelo, manteniendo una ligera flexión en los codos.",
+                "Haz una pausa por un momento en la parte superior, luego baja lentamente los brazos de vuelta a la posición inicial.",
+                "Repite el número de repeticiones deseado."
+              ],
+              "atribucion": "© Gym visual — https://gymvisual.com/",
+              "rol": "accesorio",
+              "nota": null,
+              "fases": {
+                "fase1_tecnica": {
+                  "series": "3",
+                  "reps": "12-15",
+                  "descanso": "60 seg"
+                },
+                "fase1_hipertrofia": {
+                  "series": "3",
+                  "reps": "10-12",
+                  "descanso": "75 seg"
+                },
+                "fase2_fuerza": {
+                  "series": "3",
+                  "reps": "12-15",
+                  "descanso": "60-75 seg"
+                }
+              }
+            },
+            {
+              "id": "0293",
+              "nombre": "Remo con mancuerna inclinado",
+              "nombre_en": "dumbbell bent over row",
+              "gif": "assets/exercises/0293-BJ0Hz5L.gif",
+              "grupo_muscular": "Espalda",
+              "musculo_objetivo": "espalda alta",
+              "musculos_secundarios": [
+                "bíceps",
+                "antebrazos"
+              ],
+              "equipo": "Mancuerna",
+              "instrucciones": [
+                "Ponte de pie con los pies separados a la altura de los hombros, las rodillas ligeramente flexionadas, y sujeta una mancuerna en cada mano con las palmas hacia tu cuerpo.",
+                "Inclínate hacia adelante desde las caderas, manteniendo la espalda recta y el core activado.",
+                "Deja que los brazos cuelguen rectos hacia el suelo, con los codos ligeramente flexionados.",
+                "Tira de las mancuernas hacia arriba, hacia el pecho, apretando los omóplatos entre sí.",
+                "Haz una pausa breve en la parte alta, luego baja lentamente las mancuernas de vuelta a la posición inicial.",
+                "Repite el número de repeticiones deseado."
+              ],
+              "atribucion": "© Gym visual — https://gymvisual.com/",
+              "rol": "principal",
+              "nota": null,
+              "fases": {
+                "fase1_tecnica": {
+                  "series": "3",
+                  "reps": "12-15",
+                  "descanso": "60 seg"
+                },
+                "fase1_hipertrofia": {
+                  "series": "3-4",
+                  "reps": "10-12",
+                  "descanso": "75 seg"
+                },
+                "fase2_fuerza": {
+                  "series": "4",
+                  "reps": "8-10",
+                  "descanso": "90-120 seg"
+                }
+              }
+            },
+            {
+              "id": "0297",
+              "nombre": "Curl concentrado con mancuerna",
+              "nombre_en": "dumbbell concentration curl",
+              "gif": "assets/exercises/0297-gvsWLQw.gif",
+              "grupo_muscular": "Brazos",
+              "musculo_objetivo": "bíceps",
+              "musculos_secundarios": [
+                "antebrazos"
+              ],
+              "equipo": "Mancuerna",
+              "instrucciones": [
+                "Siéntate en un banco con las piernas separadas y una mancuerna en una mano, apoyando el codo en la parte interna del muslo.",
+                "Extiende completamente el brazo y sujeta la mancuerna con un agarre supino.",
+                "Manteniendo el brazo superior quieto, exhala y flexiona el peso hacia el hombro mientras contraes el bíceps.",
+                "Continúa levantando la mancuerna hasta que el bíceps esté completamente contraído y la mancuerna esté a la altura del hombro.",
+                "Mantén la posición contraída durante una breve pausa mientras aprietas los bíceps.",
+                "Inhala y baja lentamente la mancuerna de vuelta a la posición inicial.",
+                "Repite el número de repeticiones deseado, luego cambia de brazo."
+              ],
+              "atribucion": "© Gym visual — https://gymvisual.com/",
+              "rol": "accesorio",
+              "nota": null,
+              "fases": {
+                "fase1_tecnica": {
+                  "series": "3",
+                  "reps": "12-15",
+                  "descanso": "60 seg"
+                },
+                "fase1_hipertrofia": {
+                  "series": "3",
+                  "reps": "10-12",
+                  "descanso": "75 seg"
+                },
+                "fase2_fuerza": {
+                  "series": "3",
+                  "reps": "12-15",
+                  "descanso": "60-75 seg"
+                }
+              }
+            },
+            {
+              "id": "2188",
+              "nombre": "Extensión de tríceps sentado con mancuerna",
+              "nombre_en": "dumbbell seated triceps extension",
+              "gif": "assets/exercises/2188-kont8Ut.gif",
+              "grupo_muscular": "Brazos",
+              "musculo_objetivo": "tríceps",
+              "musculos_secundarios": [
+                "hombros"
+              ],
+              "equipo": "Mancuerna",
+              "instrucciones": [
+                "Siéntate en un banco con la espalda recta y los pies planos sobre el suelo.",
+                "Sujeta una mancuerna con ambas manos y extiende los brazos rectos por encima de la cabeza.",
+                "Flexiona los codos y baja la mancuerna detrás de la cabeza, manteniendo la parte superior de los brazos cerca de las orejas.",
+                "Haz una pausa por un momento, luego endereza los brazos y vuelve a la posición inicial.",
+                "Repite el número de repeticiones deseado."
+              ],
+              "atribucion": "© Gym visual — https://gymvisual.com/",
+              "rol": "accesorio",
+              "nota": null,
+              "fases": {
+                "fase1_tecnica": {
+                  "series": "3",
+                  "reps": "12-15",
+                  "descanso": "60 seg"
+                },
+                "fase1_hipertrofia": {
+                  "series": "3",
+                  "reps": "10-12",
+                  "descanso": "75 seg"
+                },
+                "fase2_fuerza": {
+                  "series": "3",
+                  "reps": "12-15",
+                  "descanso": "60-75 seg"
+                }
+              }
+            },
+            {
+              "id": "3544",
+              "nombre": "Plancha lateral inclinada",
+              "nombre_en": "bodyweight incline side plank",
+              "gif": "assets/exercises/3544-5VXmnV5.gif",
+              "grupo_muscular": "Core / Abdomen",
+              "musculo_objetivo": "abdominales",
+              "musculos_secundarios": [
+                "oblicuos",
+                "hombros"
+              ],
+              "equipo": "Peso corporal",
+              "instrucciones": [
+                "Comienza tumbado de lado con las piernas extendidas y apiladas una sobre la otra.",
+                "Coloca el antebrazo en el suelo justo debajo del hombro, con el codo flexionado en un ángulo de 90 grados.",
+                "Activa el core y levanta las caderas del suelo, formando una línea recta desde la cabeza hasta los pies.",
+                "Mantén esta posición durante el tiempo deseado.",
+                "Baja las caderas de nuevo al suelo y repite hacia el otro lado."
+              ],
+              "atribucion": "© Gym visual — https://gymvisual.com/",
+              "rol": "core",
+              "nota": null,
+              "fases": {
+                "fase1_tecnica": {
+                  "series": "3",
+                  "reps": "30-40 seg"
+                },
+                "fase1_hipertrofia": {
+                  "series": "3",
+                  "reps": "35-45 seg"
+                },
+                "fase2_fuerza": {
+                  "series": "3",
+                  "reps": "40-60 seg"
+                }
+              }
+            }
+          ]
+        }
+      ]
     }
   }
 };

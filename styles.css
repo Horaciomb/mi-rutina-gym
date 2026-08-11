@@ -274,6 +274,8 @@ header.hero p {
   display: grid;
   grid-template-columns: 96px 1fr;
   gap: 14px;
+  transition-property: background-color;
+  transition-duration: 0.3s;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -479,7 +481,7 @@ footer.site-footer a { color: var(--text-muted); }
 .tracker-section {
   margin-top: 10px;
   padding-top: 10px;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid color-mix(in srgb, var(--border) 60%, transparent);
 }
 .tracker-row {
   display: flex;
@@ -496,23 +498,26 @@ footer.site-footer a { color: var(--text-muted); }
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  margin-bottom: 3px;
+  margin-bottom: 4px;
 }
 .tracker-input {
   width: 100%;
-  padding: 7px 10px;
+  padding: 10px 12px;
+  min-height: 44px;
   border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border-radius: 12px;
   background: var(--bg-sunken);
   color: var(--text);
-  font-size: 0.92rem;
+  font-size: 1rem;
   font-variant-numeric: tabular-nums;
   outline: none;
-  transition: border-color 0.15s;
+  transition-property: border-color, box-shadow;
+  transition-duration: 0.15s;
   box-sizing: border-box;
 }
 .tracker-input:focus {
   border-color: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 15%, transparent);
 }
 .tracker-input::placeholder {
   color: var(--text-muted);
@@ -521,16 +526,44 @@ footer.site-footer a { color: var(--text-muted); }
 .tracker-complete-row {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
+  min-height: 44px;
 }
 .tracker-checkbox {
-  width: 18px;
-  height: 18px;
-  accent-color: var(--accent);
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border: 2px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg-sunken);
   cursor: pointer;
+  flex-shrink: 0;
+  position: relative;
+  transition-property: background-color, border-color, transform;
+  transition-duration: 0.15s;
+  touch-action: manipulation;
+}
+.tracker-checkbox:checked {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+.tracker-checkbox:checked::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid var(--accent-contrast);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.tracker-checkbox:active {
+  transform: scale(0.92);
 }
 .tracker-label {
-  font-size: 0.83rem;
+  font-size: 0.85rem;
   color: var(--text-muted);
   cursor: pointer;
   user-select: none;
@@ -561,31 +594,36 @@ footer.site-footer a { color: var(--text-muted); }
 }
 .progress-select {
   width: 100%;
-  padding: 8px 10px;
+  padding: 10px 12px;
+  min-height: 44px;
   border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border-radius: 12px;
   background: var(--bg-sunken);
   color: var(--text);
-  font-size: 0.88rem;
+  font-size: 0.92rem;
   outline: none;
   margin-top: 4px;
   box-sizing: border-box;
+  transition-property: border-color, box-shadow;
+  transition-duration: 0.15s;
 }
 .progress-select:focus {
   border-color: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 15%, transparent);
 }
 .progress-summary {
   display: flex;
-  gap: 16px;
+  gap: 12px;
   margin-bottom: 16px;
 }
 .progress-stat {
   flex: 1;
   text-align: center;
+  min-width: 0;
 }
 .progress-stat-label {
   display: block;
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -593,14 +631,37 @@ footer.site-footer a { color: var(--text-muted); }
 }
 .progress-stat-value {
   display: block;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 700;
   font-variant-numeric: tabular-nums;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .progress-stat-value.positive { color: #10b981; }
 .progress-stat-value.negative { color: #ef4444; }
 .progress-chart-wrap {
   position: relative;
-  height: 220px;
+  height: 200px;
   margin-top: 8px;
+}
+@media (min-width: 640px) {
+  .progress-chart-wrap { height: 260px; }
+  .progress-stat-value { font-size: 1.1rem; }
+}
+@media (max-width: 380px) {
+  .progress-summary {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .progress-stat {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-align: left;
+  }
+  .progress-stat-label {
+    margin-bottom: 0;
+    min-width: 80px;
+  }
 }

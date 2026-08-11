@@ -7,6 +7,7 @@ recomposición corporal. Sin framework ni bundler: HTML + CSS + JavaScript vanil
 ## ✨ Características
 
 - **Tres versiones** intercambiables: Lunes-Viernes (5 días, Empuje/Tirón/Piernas), Lunes-Sábado (6 días, Push/Pull/Legs ×2) y **En casa** (3 días Full Body con mancuernas, para cuando no llegues al gym).
+- **Tracking de peso**: registrá el peso y reps de cada ejercicio, marcá si completaste la sesión, y visualizá tu progreso en un gráfico con Chart.js (datos en Firebase Realtime Database).
 - **Tres fases** de progresión (Técnica → Hipertrofia base → Fuerza/Hipertrofia) que ajustan series, reps y descanso automáticamente.
 - **GIF animado, músculos e instrucciones** paso a paso por ejercicio (en español).
 - **Tema claro/oscuro** con respeto por la preferencia del sistema; recuerda tu elección.
@@ -19,6 +20,7 @@ recomposición corporal. Sin framework ni bundler: HTML + CSS + JavaScript vanil
 ├── index.html              # Estructura de la página (vista única)
 ├── styles.css              # Estilos + temas claro/oscuro (CSS custom properties)
 ├── app.js                  # Render, estado en localStorage, tema, barra de días sticky
+├── tracking.js             # Tracking de peso/reps con Firebase + gráfico de progreso
 ├── data/routine.js         # ★ GENERADO — const ROUTINE_DATA con la rutina resuelta
 ├── assets/exercises/*.gif  # ★ GENERADO — GIFs de los ejercicios usados
 ├── scripts/build-routine.mjs   # Genera routine.js y copia los GIFs desde el dataset

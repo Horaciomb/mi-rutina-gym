@@ -81,11 +81,15 @@
 
   function exerciseCard(ex) {
     var fase = ex.fases[state.fase];
+    var info = buildInfo(ex, fase);
+    if (typeof buildTrackerSection === 'function') {
+      info.appendChild(buildTrackerSection(ex, fase));
+    }
     var card = el('div', { class: 'exercise-card' }, [
       el('div', { class: 'media' }, [
         el('img', { src: ex.gif, alt: ex.nombre, loading: 'lazy', decoding: 'async' }, [])
       ]),
-      buildInfo(ex, fase)
+      info
     ]);
     return card;
   }
@@ -219,6 +223,9 @@
     if (state.diaIndex >= version.dias.length) state.diaIndex = 0;
     var dia = version.dias[state.diaIndex];
 
+    window.__currentVersion = state.version;
+    window.__currentFase = state.fase;
+
     var focus = document.getElementById('day-focus');
     focus.innerHTML = '';
     focus.appendChild(el('h2', { text: dia.nombre + ' — ' + dia.enfoque }, []));
@@ -228,9 +235,13 @@
     grid.innerHTML = '';
     dia.ejercicios.forEach(function (ex, idx) {
       var card = exerciseCard(ex);
-      card.style.setProperty('--i', idx); // retraso de la animación escalonada
+      card.style.setProperty('--i', idx);
       grid.appendChild(card);
     });
+
+    if (typeof window.onTrackingDayRender === 'function') {
+      window.onTrackingDayRender();
+    }
   }
 
   function renderSubtitle() {

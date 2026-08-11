@@ -4,7 +4,7 @@
 > Reúne todo lo que **no viaja con `git clone`**: el dataset fuente (ignorado en `.gitignore`),
 > los skills usados (sin trackear), y las decisiones de diseño y contexto que se le dieron al proyecto.
 >
-> Última actualización: 2026-07-17.
+> Última actualización: 2026-08-11.
 
 ---
 
@@ -20,9 +20,10 @@ Sitio web **estático** (HTML + CSS + JS vanilla, sin framework ni bundler) que 
 - **Idioma:** todo en español (`<html lang="es">`).
 
 ### Contenido de la rutina (lo que da forma a los datos)
-- **Dos calendarios** seleccionables:
+- **Tres versiones** seleccionables:
   - `LV` — **Lunes a Viernes** (5 días, split Empuje / Tirón / Piernas).
   - `LS` — **Lunes a Sábado** (6 días, Push / Pull / Legs ×2).
+  - `CASA` — **En casa** (3 días Full Body con mancuernas, para cuando no llegues al gym).
 - **Tres fases** del programa (cada una cambia series/reps/descanso):
   - `fase1_tecnica` — Semanas 1-2, Técnica.
   - `fase1_hipertrofia` — Semanas 3-4, Hipertrofia base.
@@ -42,10 +43,11 @@ cambioFisc/
 ├── index.html            # Estructura de la página (una sola vista)
 ├── styles.css            # Todos los estilos (con temas claro/oscuro por CSS vars)
 ├── app.js                # Lógica: render, estado en localStorage, tema, sticky bar
+├── tracking.js           # Tracking de peso/reps con Firebase + gráfico de progreso
 ├── data/
 │   └── routine.js         # ★ GENERADO — define `const ROUTINE_DATA = {...}`
 ├── assets/
-│   └── exercises/*.gif    # ★ GENERADO — solo los GIFs de los ejercicios usados (37)
+│   └── exercises/*.gif    # ★ GENERADO — solo los GIFs de los ejercicios usados (40)
 ├── scripts/
 │   └── build-routine.mjs  # Script Node que genera data/routine.js + copia los GIFs
 ├── dataset-fuente/        # ⛔ IGNORADO por git — fuente de datos (ver §4)
@@ -60,9 +62,12 @@ cambioFisc/
 ejecutar `scripts/build-routine.mjs` con Node para regenerar `data/routine.js` y los GIFs.
 El front-end se sirve tal cual (abrir `index.html` o un servidor estático).
 
+Firebase se carga por **CDN** (no npm) — los scripts compat están en `index.html`.
+Si se ejecutó `npm install firebase` por error, borrar `node_modules/`, `package.json` y `package-lock.json` (están en `.gitignore`).
+
 ### Archivos generados — no editar a mano
 - **`data/routine.js`** — lo produce `build-routine.mjs`. La primera línea lo indica. Si editas la rutina, se hace en el `.mjs` y se regenera.
-- **`assets/exercises/*.gif`** — se copian desde `dataset-fuente/` al correr el script; solo se copian los ~37 ejercicios que la rutina realmente usa.
+- **`assets/exercises/*.gif`** — se copian desde `dataset-fuente/` al correr el script; solo se copian los ~40 ejercicios que la rutina realmente usa.
 
 ---
 
@@ -80,7 +85,7 @@ dataset-fuente/data/exercises.json  (1324 ejercicios, ignorado por git)
 
 `build-routine.mjs` contiene, hard-codeado en el propio script:
 - **`PHASES`** — parámetros de series/reps/descanso por fase y por rol (principal/accesorio/core).
-- **`VERSIONES`** (`LV` y `LS`) — qué **id de ejercicio del dataset** va en cada día, con su rol y notas opcionales. Aquí se define la rutina real.
+- **`VERSIONES`** (`LV`, `LS` y `CASA`) — qué **id de ejercicio del dataset** va en cada día, con su rol y notas opcionales. Aquí se define la rutina real.
 - **`NOMBRES_ES`** — mapa manual id→nombre en español (el dataset solo trae el nombre en inglés en `name`; las *instrucciones* sí vienen traducidas en `instruction_steps.es`).
 - **`BODY_PART_ES`, `EQUIPO_ES`, `MUSCULO_ES`** — diccionarios de traducción de grupo muscular, equipo y músculos.
 - **`PRINCIPIOS`, `TRANSVERSAL`** — textos de la guía general (principios, caminata, alimentación, seguimiento).
@@ -102,6 +107,9 @@ script lanza `Error: Ejercicio no encontrado en el dataset: id=XXXX`.
 `.gitignore` contiene:
 ```
 dataset-fuente/
+node_modules/
+package.json
+package-lock.json
 Thumbs.db
 .DS_Store
 ```
@@ -204,6 +212,9 @@ Si al abrir en el móvil se ve la versión vieja, forzar recarga / abrir en inc�
 1. **`bcc1842` — Sitio inicial de la rutina de fuerza.** Estructura completa: `index.html`, `styles.css`, `app.js`, `data/routine.js`, `scripts/build-routine.mjs`, los 37 GIFs, `.gitignore`, `.nojekyll`.
 2. **`b5b8cbc` — Traducir músculos secundarios faltantes al español.** Ampliación de `MUSCULO_ES` en el script + regeneración de `routine.js`.
 3. **`70ee7d5` — Mejorar la interfaz para uso móvil.** Ver detalle abajo.
+4. **`497c9a5` — Añadir versión En casa (full body con mancuernas).** Nueva versión `CASA` en `build-routine.mjs` con 3 días full body (Lun/Mié/Vie, 8 ejercicios c/u). Corrección: `routineData` ahora incluye `CASA: buildVersion(VERSIONES.CASA)`. 4 GIFs nuevos.
+5. **`298e3d2` — Añadir tracking de peso/reps con Firebase + gráfico de progreso.** Nuevo archivo `tracking.js` con Firebase Realtime Database (auth anónima), UI de tracking por tarjeta (inputs peso/reps, checkbox completado), y gráfico de progreso con Chart.js. CDN en `index.html`.
+6. **`1c861cc` — Mejorar tracker mobile.** Inputs con `min-height: 44px`, checkbox custom con `scale(0.96)`, progress summary responsive, transiciones suaves.
 
 ### Sesión "Mejorar la interfaz para uso móvil" (commit `70ee7d5`)
 Iteración guiada por el skill `make-interfaces-feel-better`, enfocada en que el sitio se sienta
@@ -238,9 +249,51 @@ bien **en el teléfono** (que es donde el usuario lo usa durante el entrenamient
 
 ---
 
-## 9. Convenciones y notas para retomar
+## 9. Tracking de peso y progreso (Firebase)
 
-- **Estilo de código:** JS ES5-ish dentro de una IIFE con `'use strict'`, sin dependencias. Helper `el(tag, attrs, children)` para crear DOM. Mantener ese estilo si se amplía `app.js`.
+### Arquitectura
+- **Firebase Realtime Database** vía CDN (compat), no Firestore.
+- **Auth anónima** — no requiere login, se crea un UID la primera vez.
+- **Datos en:** `users/{anonymousUid}/tracking/{date}_{exerciseId}`
+
+### Modelo de datos
+```json
+{
+  "exerciseId": "1760",
+  "date": "2026-08-11",
+  "peso": 14,
+  "reps": 12,
+  "completado": true,
+  "version": "LV",
+  "fase": "fase1_tecnica"
+}
+```
+
+### Archivos involucrados
+- **`tracking.js`** — init Firebase, auth anónima, CRUD, UI de tracking por tarjeta, gráfico de progreso con Chart.js.
+- **`index.html`** — CDN de Firebase (app, auth, database) y Chart.js.
+- **`app.js`** — hook `onTrackingDayRender` después de `renderDay()`, exposición de `buildTrackerSection`.
+- **`styles.css`** — estilos de tracker (inputs 44px, checkbox custom, progress responsive).
+
+### Configuración Firebase
+- Proyecto: `rutina-app-eed1b`
+- `databaseURL`: `https://rutina-app-eed1b-default-rtdb.firebaseio.com`
+- Auth: anónimo activado
+- Database: modo de prueba (test mode)
+
+### Flujo
+1. Al cargar la página, `tracking.js` init Firebase y autentica anónimamente.
+2. `app.js` llama a `buildTrackerSection(ex, fase)` para cada tarjeta de ejercicio.
+3. El usuario ingresa peso/reps y marca "Completado" → se guarda en Firebase con la fecha de hoy.
+4. Al volver al mismo día, se cargan los datos guardados.
+5. Si no hay datos para hoy, se carga el último peso usado como valor por defecto.
+6. En la guía general, la tarjeta "Progreso" muestra gráfico de línea (peso + reps vs tiempo) por ejercicio.
+
+---
+
+## 10. Convenciones y notas para retomar
+
+- **Estilo de código:** JS ES5-ish dentro de una IIFE con `'use strict'`, sin dependencias. Helper `el(tag, attrs, children)` para crear DOM. Mantener ese estilo si se amplía `app.js` o `tracking.js`.
 - **No editar `data/routine.js` a mano** — regenerar desde el script.
 - **Los GIFs** en `assets/exercises/` están commiteados; solo se agregan nuevos al usar nuevos ids en el script (que los copia desde el dataset).
 - **Windows / Git:** el repo se trabaja en Windows; git avisa `LF will be replaced by CRLF` — es esperado, no rompe nada.

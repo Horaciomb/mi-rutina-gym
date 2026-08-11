@@ -82,15 +82,16 @@
   function exerciseCard(ex) {
     var fase = ex.fases[state.fase];
     var info = buildInfo(ex, fase);
-    if (typeof buildTrackerSection === 'function') {
-      info.appendChild(buildTrackerSection(ex, fase));
-    }
-    var card = el('div', { class: 'exercise-card' }, [
+    var children = [
       el('div', { class: 'media' }, [
         el('img', { src: ex.gif, alt: ex.nombre, loading: 'lazy', decoding: 'async' }, [])
       ]),
       info
-    ]);
+    ];
+    if (typeof buildTrackerSection === 'function') {
+      children.push(buildTrackerSection(ex, fase));
+    }
+    var card = el('div', { class: 'exercise-card' }, children);
     return card;
   }
 
